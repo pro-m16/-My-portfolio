@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My portfolio</title>
+        <link rel="stylesheet" href="portfo.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,300;1,500&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+    </head>
+    <body>
+        <div class="nav">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="#">Mark</a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="web.html"></a>Home</li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="Portfolio.html">Portfolio</a></li>
+                        <li><a href="contact"></a>Contact</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="app-text">
+                    <h1><span>Hello</span> I'm<br>Mark</h1>
+                    <div class="primary-btn">
+                    </div>
+                </div>
+            </div>
+            <div class="socials">
+                <ul>
+                    <li><a href="https://www.instagram.com/kyng___mark_/"><img
+                                src="https://img.icons8.com/color/48/000000/instagram-new--v1.png" /></a></li>
+                    <li><a href="https://github.com/"><img src="https://img.icons8.com/fluent/48/26e07f/github.png" /></a></li>
+                    <li><a href="https://www.linkedin.com/in/mark-hinds-013367204/"><img src="https://img.icons8.com/color/48/000000/linkedin.png" /></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="skills">
+             <h1><ins>Skills</ins></h1>
+                <div class="skill">
+                    <div class="skill-name">HTML</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="90"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="75"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Java script</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="50"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h1></h1>
+                    <div class="skill-name">Python</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="67"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('.skill-per').each(function(){
+                var $this = $(this);
+                var per = $this.attr('per');
+                $this.css("width",per+'%');
+                $({animatedValue: 0}).animate({animatedValue: per},{
+                    duration: 1000,
+                    step: function(){
+                        $this.attr('per', Math.floor(this.animatedValue) + '%');
+                    },
+                    complete: function () {
+                        $this.attr('per', Math.floor(this.animatedValue) + '%');
+                    }
+                })
+            })
+        </script>
+        <div class="contact">
+
+
+            <h1><ins>Contact</ins></h1>
+            <div class="border"></div>
+            <form class="contact-info" action="https://formsubmit.co/m16futureincorp@gmail.com" method="POST">
+                <input type="text" class="name-form-text" placeholder="Your name">
+                <input type="email" class="name-form-text" placeholder="Your email">
+                <input type="text" class="name-form-text" placeholder="Your phone">
+                <textarea class="name-form-text" placeholder="Type your message"></textarea>
+                <input type="submit" class="contact-form-submit" value="Send">
+             </form>
+        </div>
+        <footer>
+            <div class="footer-con">
+                <h3>My Portfolio</h3>
+                <p>A Promise to bring the best service there is!</p>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.facebook.com/mark.hinds.5492/"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" /></a></li>
+                    <li><a href="https://www.instagram.com/kyng___mark_/"><img
+                                src="https://img.icons8.com/color/48/000000/instagram-new--v1.png" /></a></li>
+                    <li><a href="https://github.com/"><img src="https://img.icons8.com/fluent/48/26e07f/github.png" /></a></li>
+                    <li><a href="https://www.linkedin.com/in/mark-hinds-013367204/"><img src="https://img.icons8.com/color/48/000000/linkedin.png" /></a></li>
+                    <li><a href="https://accounts.snapchat.com/accounts/welcome"><img src="https://img.icons8.com/color/48/000000/snapchat-circled-logo--v4.png" /></a></li>
+
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright&copy;2021 All Rights Reserved <span>M16 Industries</span></p>
+            </div>
+        </footer>
+    </body>
+</html>
+
+
